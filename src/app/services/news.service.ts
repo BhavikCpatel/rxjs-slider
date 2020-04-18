@@ -11,7 +11,7 @@ export class NewsService {
   constructor(private http: HttpClient) {}
   refresh$ = new BehaviorSubject(null);
   loadnews$ = this.http.get<News[]>('http://localhost:5201/news').pipe(
-    tap((data) => console.log('Getting Data', data)),
+    tap((data) => console.log('Load News:Getting Data', data)),
     catchError((err) => {
       console.error('Loading News', err);
       return EMPTY;

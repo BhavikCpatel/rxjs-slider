@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { timer, Observable } from 'rxjs';
+import { timer, Observable, fromEvent } from 'rxjs';
 import { NewsService } from './services/news.service';
 import { News } from './models/news';
 import { tap, takeUntil, takeWhile } from 'rxjs/operators';
@@ -11,10 +11,10 @@ import { tap, takeUntil, takeWhile } from 'rxjs/operators';
 export class AppComponent implements OnInit, OnDestroy {
   // 10 seconds refresh time
   allowLoad = true;
-  refreshTimer$ = timer(0, 20000);
+  refreshTimer$ = timer(0, 6000000);
   title = 'rxjs-slider';
   news$: Observable<News[]> = this.newsService.news$;
-
+  //mouseMove$ = fromEvent(document, 'mousemove');
   constructor(private newsService: NewsService) {}
 
   ngOnInit() {
@@ -24,8 +24,12 @@ export class AppComponent implements OnInit, OnDestroy {
         tap((_) => console.log(new Date()))
       )
       .subscribe(this.newsService.refresh$);
+    //this.mouseMove$.subscribe((move: MouseEvent) => console.log(move.clientY));
   }
-
+  refreshNews() {
+    console.log('calling event');
+    this.newsService.refresh$.next(0);
+  }
   ngOnDestroy() {
     this.allowLoad = false;
   }

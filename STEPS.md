@@ -60,3 +60,11 @@
 
 > create a data.json in assets folder
 > import HttpClientModule in app.module.ts file
+
+`$ ng g c drag-load`
+
+    CREATE src/app/drag-load/drag-load.component.html (24 bytes)
+    CREATE src/app/drag-load/drag-load.component.spec.ts (643 bytes)
+    CREATE src/app/drag-load/drag-load.component.ts (286 bytes)
+    CREATE src/app/drag-load/drag-load.component.scss (0 bytes)
+    UPDATE src/app/app.module.ts (606 bytes)
