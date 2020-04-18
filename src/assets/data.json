@@ -1,0 +1,26 @@
+[
+  {
+    "title": "New 1",
+    "headline": "News Headline 3",
+    "timestamp": "2019-04-20T10:20:30Z",
+    "source": "Bhavik"
+  },
+  {
+    "title": "New 2",
+    "headline": "News Headline 3",
+    "timestamp": "2019-06-20T10:20:30Z",
+    "source": "Bhavik"
+  },
+  {
+    "title": "New 3",
+    "headline": "News Headline 3",
+    "timestamp": "2019-08-20T10:20:30",
+    "source": "Bhavik"
+  },
+  {
+    "title": "New 3",
+    "headline": "News Headline 3",
+    "timestamp": "2019-08-20 10:20:30",
+    "source": "Bhavik"
+  }
+]
